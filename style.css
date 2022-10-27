@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+}
+html {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 20px 0;
+  justify-content: center;
+  background-image: url(./hd-wallpaper-gc2215d39c_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px #cbd4c2;
+  border: none;
+  outline: none;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+}
+
+#header {
+  padding: 10px;
+  color: #d36c6c;
+  font-size: 26px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  background-color: #92a1d1;
+}
+#container {
+  width: 770px;
+}
+#weekdays {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+}
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, .4);
+  color: #f5f5f0;
+  margin: 5px;
+  box-shadow: 0px 0px 10px #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
+}
+.day:hover {
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+}
+
+.day + #currentDay {
+  background-color: rgba(0,0,0,.8);
+}
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+.padding {
+  cursor: default !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton,
+#deleteButton {
+  background-color: #d36c6c;
+}
+#saveButton,
+#closeButton {
+  background-color: #92a1d1;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
